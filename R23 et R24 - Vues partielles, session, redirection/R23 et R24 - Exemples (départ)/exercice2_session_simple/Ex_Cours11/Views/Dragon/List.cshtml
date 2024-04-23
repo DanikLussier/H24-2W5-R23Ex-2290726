@@ -1,0 +1,17 @@
+﻿@using Ex_Cours11.Models;
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model List<Dragon>
+
+@{
+    Layout = "_Layout";
+}
+
+<h2>Vues partielles</h2>
+<div class="row m-2">
+    @foreach (Dragon d in Model)
+    {
+        <div class="col-6 col-md-3 p-2">
+            <partial name="_DragonPartial" for="@d" />
+        </div>
+    }
+</div>

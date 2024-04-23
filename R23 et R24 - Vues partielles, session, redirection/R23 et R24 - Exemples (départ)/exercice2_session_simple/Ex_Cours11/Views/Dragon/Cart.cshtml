@@ -1,0 +1,32 @@
+﻿@model List<Ex_Cours11.Models.Dragon>
+
+@{
+    Layout = "_Layout";
+}
+
+<h1>Votre panier</h1>
+
+@if (Model == null)
+{
+    <p>Votre panier est vide !</p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr><th>Id</th><th>Name</th><th>Image</th></tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(modelItem => item.Id)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Name)</td>
+                    <td><img src="~/images/@(item.ImgUrl).png" alt="@item.Name"/></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+}
+

@@ -1,0 +1,8 @@
+﻿@model int?
+@{
+    Layout = "_Layout";
+}
+
+<h2>Vous avez été redirigés ici</h2>
+
+<p>La valeur reçue par la vue est : @(Model == null ? "Aucune valeur reçue :(" : Model.ToString())</p>

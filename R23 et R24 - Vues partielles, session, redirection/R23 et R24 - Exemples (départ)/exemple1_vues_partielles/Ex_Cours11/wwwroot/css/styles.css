@@ -1,0 +1,45 @@
+﻿@charset "UTF-8";
+
+header, footer {
+    background-color: #5a8571;
+    color: white
+}
+
+header, footer, main {
+    border: #9fbfa0 solid 3px;
+    border-radius: 10px;
+    border-right-color: #2d4d47;
+    border-bottom-color: #2d4d47;
+}
+
+body{
+    padding:10px;
+    font-family:Verdana;
+}
+
+main{
+    margin:10px 0px 10px 0px;
+}
+
+.code{
+    font-family:'Courier New';
+    font-weight:bold;
+}
+
+main .row {
+    border: #9fbfa0 solid 3px;
+    border-radius: 10px;
+}
+
+a{
+    color:inherit;
+    text-decoration:inherit;
+    padding:15px;
+}
+
+    a:hover {
+        background-color: white;
+        color: #5a8571;
+        text-decoration:inherit;
+        border-radius:10px;
+    }

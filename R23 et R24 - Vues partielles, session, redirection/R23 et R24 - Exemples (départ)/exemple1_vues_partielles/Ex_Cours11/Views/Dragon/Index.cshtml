@@ -1,0 +1,19 @@
+﻿@{ 
+    Layout = "_Layout";
+}
+<h2>Cours 11</h2>
+<p>Vues partielles, cookies (Variables de session) et redirections.</p>
+<div class="text-center my-2">
+        @if (ViewData["name"] != null)
+        {
+            <p>Bonjour @ViewData["name"] !</p>
+        }
+        else
+        {
+            <form method="POST" action="/Dragon/Index">
+                <label for="Name">Quel est ton nom ? </label>
+                <input type="text" id="Name" name="Name" />&nbsp;&nbsp;
+                <button type="submit">Envoyer</button>
+            </form>
+        }
+</div>

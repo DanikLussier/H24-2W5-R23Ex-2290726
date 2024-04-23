@@ -1,0 +1,14 @@
+﻿@using Ex_Cours11.Models;
+@model Dragon
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+<div>
+    @Model.Id - @Model.Name<br />
+    <img alt="@Model.Name" src="~/images/@(Model.ImgUrl).png"
+         class="img-fluid" />
+    <form method="POST" asp-controller="Dragon" asp-action="Cart">
+        <input type="hidden" name="Id" value="@Model.Id" />
+        <button type="submit">Ajouter au panier</button>
+    </form>
+</div>
+
